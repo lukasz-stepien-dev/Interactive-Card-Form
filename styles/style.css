@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+* {margin: 0px; box-sizing: border-box; font-family: 'Space Grotesk', sans-serif;}
+
+@media only screen and (max-width: 375px) {
+
+}
