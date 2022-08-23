@@ -22,7 +22,7 @@
       <p id="card-expiry-date">00/00</p>
     </div>
   </section>
-  <form action="">
+  <form action="post" target="#">
     <label for="cardholder-name" id="cardholder-name-label">CARDHOLDER NAME</label><br>
     <input name="cardholder-name" id="cardholder-name" placeholder="e.g. Jane Appleseed" maxlength="150"><br>
     <p id="error-name" class="error-in-form"></p>
@@ -38,8 +38,9 @@
       <p id="error-expiry-date" class="error-in-form"></p>
       <p id="error-cvc" class="error-in-form"></p>
     </article>
-    <input type="submit" value="Confirm" id="confirm">
+    <input type="submit" value="Please, turn ON JavaScript." id="confirm" disabled>
   </form>
+  <p id="off-js">Your JavaScript is OFF! Now you use demo, to send your card details, turn ON JavaScript.</p>
   <script src="scripts/app.js"></script>
 </body>
 </html>

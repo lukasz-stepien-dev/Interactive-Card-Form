@@ -157,4 +157,17 @@
         font-weight: normal;
         color: hsl(270, 3%, 87%);
     }
+
+    /* Information about turn off JS */
+
+    #off-js {
+        position: absolute;
+        width: 80%;
+        margin: 185% 10% 0% 10%;
+        font-weight: bold;
+        font-size: 5vw;
+        letter-spacing: 0.1em;
+        color: hsl(278, 68%, 11%);
+    }
+
 }
