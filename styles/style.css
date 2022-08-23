@@ -89,13 +89,14 @@
         letter-spacing: 0.2em;
     }
 
-    #confirm {
-        background-color: hsl(278, 68%, 11%);
-        color: white;
-        border: 0px;
-        font-size: large;
-        font-weight: normal;
-        color: hsl(270, 3%, 87%);
+    .error-in-form {
+        margin: -2% 0% 1% 10%;
+        font-size: 0.6em;
+        color: hsl(0, 100%, 66%);
+    }
+
+    #error-cvc {
+        margin-left: 2%;
     }
 
     #cardholder-name, #card-number, #cardholder-name-label, #card-number-label, #confirm {
@@ -108,12 +109,21 @@
         border-width: 0.1vw;
         border-color: hsl(270, 3%, 87%);
         border-style: solid;
-
     }
 
     #cardholder-name::placeholder, #card-number::placeholder, #expiry-date-month::placeholder, #expiry-date-year::placeholder, #cvc::placeholder {
         color: hsl(270, 3%, 87%);
     }
+
+    #cardholder-name:focus, #card-number:focus, #expiry-date-month:focus, #expiry-date-year:focus, #cvc:focus {
+        outline: none;
+        background: 
+        linear-gradient(white 0 0) padding-box,
+        linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+        border: 0.5vw solid transparent;
+        border-radius: 2.5vw;
+    }
+
 
     #expiry-label {
         margin-right: 13%;
@@ -137,5 +147,14 @@
 
     #cvc {
         margin-top: -1%;
+    }
+
+    #confirm {
+        background-color: hsl(278, 68%, 11%);
+        color: white;
+        border: 0px;
+        font-size: 5vw;
+        font-weight: normal;
+        color: hsl(270, 3%, 87%);
     }
 }
