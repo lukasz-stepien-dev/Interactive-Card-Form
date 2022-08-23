@@ -4,4 +4,138 @@
 
 @media only screen and (max-width: 375px) {
 
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+        /* Cards */
+
+    img, #card-number-on-the-image, #cardholder-name-on-the-image, #card-expiry-date, #cvc-on-the-blank-card {
+        position: absolute;
+    }
+
+    #mobile-bg {
+        height: 55vw;
+        width: 100vw;
+    }
+
+    #card-number-on-the-image, #cardholder-name-on-the-image, #card-expiry-date, #cvc-on-the-blank-card {
+        color: white;
+        letter-spacing: 0.1em;
+    }
+
+    #bg-card-front, #bg-card-back {
+        max-width: 65%;
+    }
+
+    #bg-card-front {
+        margin: 30% 0% 0% 10%;
+    }
+
+    #bg-card-back {
+        margin: 10% 0% 0% 21%;
+    }
+
+    #cvc-on-the-blank-card {
+        margin: 26% 0% 0% 72%;
+        font-size: 2.5vw;
+    }
+
+    #card-logo {
+        width: 15%;
+        margin: 34% 0% 0% 14%;
+    }
+
+    #card-number-on-the-image {
+        margin: 49% 0% 0% 14%;
+        font-size: 4vw;
+    }
+
+    #cardholder-name-on-the-image {
+        margin: 57.5% 0% 0% 14%;
+        font-size: 2.5vw;
+    }
+
+    #card-expiry-date {
+        margin: 57.5% 0% 0% 60%;
+        font-size: 2.5vw;
+    }
+
+    /* Form */
+
+    form {
+        margin-top: 80%;
+    }
+
+    article {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    input {
+        margin: 2% 10% 4% 10%;
+        height: 15vw;
+        font-size: 5vw;
+        font-weight: bold;
+        padding-left: 4vw;
+    }
+
+    label {
+        margin: 2% 10% 4% 10%;
+        font-size: 3vw;
+        font-weight: 600;
+        color: hsl(278, 68%, 11%);
+        letter-spacing: 0.2em;
+    }
+
+    #confirm {
+        background-color: hsl(278, 68%, 11%);
+        color: white;
+        border: 0px;
+        font-size: large;
+        font-weight: normal;
+        color: hsl(270, 3%, 87%);
+    }
+
+    #cardholder-name, #card-number, #cardholder-name-label, #card-number-label, #confirm {
+        width: 80%;
+        border-radius: 2.5vw;
+        
+    }
+
+    #cardholder-name, #card-number, #expiry-date-month, #expiry-date-year, #cvc {
+        border-width: 0.1vw;
+        border-color: hsl(270, 3%, 87%);
+        border-style: solid;
+
+    }
+
+    #cardholder-name::placeholder, #card-number::placeholder, #expiry-date-month::placeholder, #expiry-date-year::placeholder, #cvc::placeholder {
+        color: hsl(270, 3%, 87%);
+    }
+
+    #expiry-label {
+        margin-right: 13%;
+    }
+
+    #expiry-date-month, #expiry-date-year {
+        margin-top: -1%;
+        width: 19%;
+        border-radius: 2.5vw;
+    }
+
+    #expiry-date-year {
+        margin-left: -9%;
+    }
+
+    #cvc, #cvc-label {
+        width: 38%;
+        margin-left: -8%;
+        border-radius: 2.5vw;
+    }
+
+    #cvc {
+        margin-top: -1%;
+    }
 }
