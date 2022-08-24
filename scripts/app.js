@@ -53,7 +53,8 @@ function cardNumberCheck() {
     }
 
     for (let i = 0; i < number.length; i++) {
-        if (number[i].charCodeAt(0) > 57 && number[i].charCodeAt(0) < 48) {
+        console.log(number[i].charCodeAt(0));
+        if (number[i].charCodeAt(0) < 57 && number[i].charCodeAt(0) > 48) {
             wrongCardNumber.textContent = "Wrong format, numbers only.";
         } else {
             wrongCardNumber.textContent = "";
