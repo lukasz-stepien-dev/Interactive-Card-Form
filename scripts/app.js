@@ -40,24 +40,24 @@ function cardholderNameCheck() {
 function cardNumberCheck() {
     isInputGood = 0;
     let number = this.value;
-
     if (number === "") {
         wrongCardNumber.textContent = "Can't be blank";
-    } else if (number.length < 16){
-        wrongCardNumber.textContent = "Too little, type 16 numbers.";
+    } else if (number.length < 9){
+        wrongCardNumber.textContent = "Too little, type 9 numbers.";
     } else {
         wrongCardNumber.textContent = "";
         isInputGood++;
     }
+
     for (let i = 0; i < number.length; i++) {
-        if (number[i].charCodeAt(0) < 48 && number[i].charCodeAt(0) > 57) {
+        if (number[i].charCodeAt(0) < 57 || number[i].charCodeAt(0) > 48) {
             wrongCardNumber.textContent = "Wrong format, numbers only.";
         } else {
             wrongCardNumber.textContent = "";
             isInputGood++;
-        }
+            }
+        
     }
-
     if (isInputGood === 2) {
         isEverythingGood++;
     }
@@ -66,9 +66,10 @@ function cardNumberCheck() {
 function expiryCheck() {
     isInputGood = 0;
     let expiry = this.value;
-
     if (expiry === "") {
         wrongExpiryDate.textContent = "Can't be blank";
+    } else if (expiry.length < 2){
+        wrongExpiryDate.textContent = "One more number.";
     } else {
         wrongExpiryDate.textContent = "";
         isInputGood++;
@@ -76,13 +77,14 @@ function expiryCheck() {
 
     for (let i = 0; i < expiry.length; i++) {
         if (expiry[i].charCodeAt(0) > 57 && expiry[i].charCodeAt(0) < 48) {
-            wrongExpiryDate.textContent = "Wrong format, numbers only.";
+        if (number[i].charCodeAt(0) < 57 && number[i].charCodeAt(0) > 48) {
+            wrongCardNumber.textContent = "Wrong format, numbers only.";
         } else {
-            wrongExpiryDate.textContent = "";
+            wrongCardNumber.textContent = "";
             isInputGood++;
+            }
         }
     }
-
     if (isInputGood === 2) {
         isEverythingGood++;
     }
