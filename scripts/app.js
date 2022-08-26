@@ -14,6 +14,7 @@ let today = new Date();
 
 function cardholderNameCheck() {
     let name = this.value;
+    name = name.trim();
 
     if (name === "") {
         wrongName.textContent = "Can't be blank" ;
@@ -24,9 +25,15 @@ function cardholderNameCheck() {
     for (let i = 0; i < name.length; i++) {
         if (name[i].charCodeAt(0) >= 33 && name[i].charCodeAt(0) <= 64) {
             wrongName.textContent = "Wrong format, letters only.";
+            break;
         } else {
             wrongName.textContent = "";
         }
+    }
+
+
+    if (name.indexOf(' ') === -1 && wrongName.textContent != "Can't be blank" && wrongName.textContent != "Wrong format, letters only.") {
+        wrongName.textContent = "Type full name."
     }
 }
 
@@ -129,4 +136,4 @@ month.addEventListener('blur', expiryCheck, false);
 month.addEventListener('blur', monthCheck, false);
 year.addEventListener('blur', expiryCheck, false);
 year.addEventListener('blur', yearCheck, false);
-cvc.addEventListener('blur', cvcCheck, false)
+cvc.addEventListener('blur', cvcCheck, false);
