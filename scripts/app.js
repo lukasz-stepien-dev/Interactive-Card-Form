@@ -13,6 +13,7 @@ let year = document.getElementById("expiry-date-year");
 let wrongExpiryDate = document.getElementById("error-expiry-date");
 let cvc = document.getElementById("cvc");
 let wrongCVC = document.getElementById("error-cvc");
+let wrongForm = document.getElementById("error-confirm");
 let numberOnTheImage = document.getElementById("card-number-on-the-image");
 let nameOnTheImage = document.getElementById("cardholder-name-on-the-image");
 let monthOnTheImage = document.getElementById("month-on-the-image");
@@ -139,6 +140,15 @@ function cvcCheck() {
     }
 }
 
+function checkErrors(event) {
+    if (wrongName.textContent != "" || wrongCardNumber.textContent != "" || wrongExpiryDate.textContent != "" || wrongCVC.textContent != "") {
+        wrongForm.textContent = "Fill correct form.";
+        event.preventDefault();
+    } else {
+        wrongForm.textContent = "";
+    }
+}
+
 cardholderName.addEventListener("blur", cardholderNameCheck, false);
 cardNumber.addEventListener("blur", cardNumberCheck, false);
 month.addEventListener("blur", expiryCheck, false);
@@ -146,3 +156,4 @@ month.addEventListener("blur", monthCheck, false);
 year.addEventListener("blur", expiryCheck, false);
 year.addEventListener("blur", yearCheck, false);
 cvc.addEventListener("blur", cvcCheck, false);
+submit.addEventListener("click", checkErrors, false);

@@ -104,6 +104,10 @@
         width: 40%;
     }
 
+    #error-confirm {
+        margin-left: 40%;
+    }
+
     #cardholder-name, #card-number, #cardholder-name-label, #card-number-label, #confirm {
         width: 80%;
         border-radius: 2.5vw;
