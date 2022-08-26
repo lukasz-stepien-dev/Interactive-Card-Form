@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Card Form</title>
+    <link rel="stylesheet" href="styles/complete.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <section>
+        <img src="images/bg-main-mobile.png" alt="gradient background" id="mobile-bg">
+        <div>
+        <img id="bg-card-back" src="images/bg-card-back.png" alt="blank card on the back">
+        <p id="cvc-on-the-blank-card">000</p>
+        </div>
+        <div>
+            <img id="bg-card-front" src="images/bg-card-front.png" alt=" blank card on the front">
+            <img id="card-logo" src="images/card-logo.svg" alt="card logo on the left top corner of the card">
+            <p id="card-number-on-the-image">0000 0000 0000 0000</p>
+            <p id="cardholder-name-on-the-image">JANE APPLESEED</p>
+            <p id="card-expiry-date"><span id="month-on-the-image">00</span>/<span id="year-on-the-image">00</span></p>
+        </div>
+    </section>
+    <section id="acknoledgements">
+        <div id="circle"><i class="fa-solid fa-check fa-2x"></i></div>
+        <h1>THANK YOU!</h1>
+        <p id="sended-details">We've added your card details</p>
+        <button >Continue</button>
+    </section>
+    <script src="https://kit.fontawesome.com/f69759da29.js" crossorigin="anonymous"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

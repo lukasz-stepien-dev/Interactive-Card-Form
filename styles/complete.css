@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+* {margin: 0px; box-sizing: border-box; font-family: 'Space Grotesk', sans-serif;}
+
+@media only screen and (max-width: 375px) {
+    /* Cards */
+
+    body {
+        display: flex;
+    }
+
+    img, #card-number-on-the-image, #cardholder-name-on-the-image, #card-expiry-date, #cvc-on-the-blank-card {
+        position: absolute;
+    }
+
+    #mobile-bg {
+        height: 55vw;
+        width: 100vw;
+    }
+
+    #card-number-on-the-image, #cardholder-name-on-the-image, #card-expiry-date, #cvc-on-the-blank-card {
+        color: white;
+        letter-spacing: 0.1em;
+    }
+
+    #bg-card-front, #bg-card-back {
+        max-width: 65%;
+    }
+
+    #bg-card-front {
+        margin: 30% 0% 0% 10%;
+    }
+
+    #bg-card-back {
+        margin: 10% 0% 0% 21%;
+    }
+
+    #cvc-on-the-blank-card {
+        margin: 26% 0% 0% 72%;
+        font-size: 2.5vw;
+    }
+
+    #card-logo {
+        width: 15%;
+        margin: 34% 0% 0% 14%;
+    }
+
+    #card-number-on-the-image {
+        margin: 49% 0% 0% 14%;
+        font-size: 4vw;
+    }
+
+    #cardholder-name-on-the-image {
+        margin: 57.5% 0% 0% 14%;
+        font-size: 2.5vw;
+    }
+
+    #card-expiry-date {
+        margin: 57.5% 0% 0% 60%;
+        font-size: 2.5vw;
+    }
+
+    /* Acknowlegements */
+
+    h1 {
+        margin: 10% 0% 5% 0%;
+        color: hsl(278, 68%, 11%);
+        letter-spacing: 0.2em;
+        font-size: 7vw;
+    }
+
+    i {
+        color: white;
+    }
+
+    button {
+        width: 80%;
+        height: 15vw;
+        border-radius: 2.5vw;
+        border: none;
+        font-size: 5vw;
+        color: white;
+        background: hsl(278, 68%, 11%);
+    }
+
+    #sended-details {
+        margin: 0% 0% 10% 0%;
+        font-size: 5vw;
+        color: hsl(279, 6%, 55%);
+    }
+
+    #acknoledgements {
+        margin-top: 80%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #circle {
+        margin: 0% 30% 0% 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+        background: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    }
+
+
+}
