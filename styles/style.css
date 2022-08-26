@@ -97,6 +97,11 @@
 
     #error-cvc {
         margin-left: 2%;
+        width: 40%;
+    }
+
+    #error-expiry-date {
+        width: 40%;
     }
 
     #cardholder-name, #card-number, #cardholder-name-label, #card-number-label, #confirm {
