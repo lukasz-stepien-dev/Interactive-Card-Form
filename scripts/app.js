@@ -1,5 +1,8 @@
-document.getElementById("off-js").textContent = "";
+let submit = document.getElementById("confirm")
 document.getElementById("confirm").setAttribute("value", "Confirm");
+document.getElementById("off-js").textContent = "";
+submit.setAttribute("value", "Confirm");
+
 
 let cardholderName = document.getElementById("cardholder-name");
 let wrongName = document.getElementById("error-name");
@@ -10,11 +13,16 @@ let year = document.getElementById("expiry-date-year");
 let wrongExpiryDate = document.getElementById("error-expiry-date");
 let cvc = document.getElementById("cvc");
 let wrongCVC = document.getElementById("error-cvc");
+let numberOnTheImage = document.getElementById("card-number-on-the-image");
+let nameOnTheImage = document.getElementById("cardholder-name-on-the-image");
 let today = new Date();
 
 function cardholderNameCheck() {
     let name = this.value;
+    nameOnTheImage = name;
+
     name = name.trim();
+
 
     if (name === "") {
         wrongName.textContent = "Can't be blank" ;
@@ -35,10 +43,14 @@ function cardholderNameCheck() {
     if (name.indexOf(' ') === -1 && wrongName.textContent != "Can't be blank" && wrongName.textContent != "Wrong format, letters only.") {
         wrongName.textContent = "Type full name."
     }
+
+
 }
 
 function cardNumberCheck() {
     let number = this.value;
+    numberOnTheImage.textContent = number.substring(0, 4) + " " + number.substring(4, 8) + " " + number.substring(8, 12) + " " + number.substring(12, 16);
+    
 
     if (number === "") {
         wrongCardNumber.textContent = "Can't be blank";
@@ -130,10 +142,11 @@ function cvcCheck() {
     }
 }
 
-cardholderName.addEventListener('blur', cardholderNameCheck, false);
-cardNumber.addEventListener('blur', cardNumberCheck, false);
-month.addEventListener('blur', expiryCheck, false);
-month.addEventListener('blur', monthCheck, false);
-year.addEventListener('blur', expiryCheck, false);
-year.addEventListener('blur', yearCheck, false);
-cvc.addEventListener('blur', cvcCheck, false);
+cardholderName.addEventListener("blur", cardholderNameCheck, false);
+cardNumber.addEventListener("blur", cardNumberCheck, false);
+month.addEventListener("blur", expiryCheck, false);
+month.addEventListener("blur", monthCheck, false);
+year.addEventListener("blur", expiryCheck, false);
+year.addEventListener("blur", yearCheck, false);
+cvc.addEventListener("blur", cvcCheck, false);
+
