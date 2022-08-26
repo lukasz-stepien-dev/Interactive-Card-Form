@@ -15,15 +15,15 @@ let cvc = document.getElementById("cvc");
 let wrongCVC = document.getElementById("error-cvc");
 let numberOnTheImage = document.getElementById("card-number-on-the-image");
 let nameOnTheImage = document.getElementById("cardholder-name-on-the-image");
+let monthOnTheImage = document.getElementById("month-on-the-image");
+let yearOnTheImage = document.getElementById("year-on-the-image"); 
 let today = new Date();
 
 function cardholderNameCheck() {
     let name = this.value;
-    nameOnTheImage = name;
-
     name = name.trim();
-
-
+    nameOnTheImage.textContent = name; 
+    
     if (name === "") {
         wrongName.textContent = "Can't be blank" ;
     } else {
@@ -43,14 +43,11 @@ function cardholderNameCheck() {
     if (name.indexOf(' ') === -1 && wrongName.textContent != "Can't be blank" && wrongName.textContent != "Wrong format, letters only.") {
         wrongName.textContent = "Type full name."
     }
-
-
 }
 
 function cardNumberCheck() {
     let number = this.value;
     numberOnTheImage.textContent = number.substring(0, 4) + " " + number.substring(4, 8) + " " + number.substring(8, 12) + " " + number.substring(12, 16);
-    
 
     if (number === "") {
         wrongCardNumber.textContent = "Can't be blank";
@@ -67,7 +64,6 @@ function cardNumberCheck() {
             wrongCardNumber.textContent = "";
             }
     }
-    
 
     if (number.length < 16 && wrongCardNumber.textContent != "Can't be blank" && wrongCardNumber.textContent != "Wrong format, numbers only.") {
         wrongCardNumber.textContent = "Too little, type 16 numbers.";
@@ -76,13 +72,13 @@ function cardNumberCheck() {
 
 function expiryCheck() {
     let expiry = this.value;
+    
 
     if (expiry === "") {
         wrongExpiryDate.textContent = "Can't be blank";
     } else {
         wrongExpiryDate.textContent = "";
     }
-
 
     for (let i = 0; i < expiry.length; i++) {
         if (expiry[i].charCodeAt(0) > 57 || expiry[i].charCodeAt(0) < 48) {
@@ -91,12 +87,12 @@ function expiryCheck() {
         } else {
             wrongExpiryDate.textContent = "";
             }
-        
     }
 }
 
 function monthCheck() {
     let expiryMonth = this.value;
+    monthOnTheImage.textContent = expiryMonth; 
     Number(expiryMonth);
     if (expiryMonth > 12) {
         wrongExpiryDate.textContent = "We have 12 months.";
@@ -106,6 +102,7 @@ function monthCheck() {
 function yearCheck() {
     let expiryYear = this.value;
     let yearAfter15Years = today.getFullYear() + 15 - 2000;
+    yearOnTheImage.textContent = expiryYear;
     
     Number(expiryYear);
     if (expiryYear > yearAfter15Years) {
@@ -126,7 +123,6 @@ function cvcCheck() {
         wrongCVC.textContent = "";
     }
 
-
     for (let i = 0; i < cvcInput.length; i++) {
         if (cvcInput[i].charCodeAt(0) > 57 || cvcInput[i].charCodeAt(0) < 48) {
             wrongCVC.textContent = "Wrong format, numbers only.";
@@ -135,7 +131,6 @@ function cvcCheck() {
             wrongCVC.textContent = "";
             }
     }
-    
 
     if (cvcInput.length < 3 && wrongCVC.textContent != "Can't be blank" && wrongCVC.textContent != "Wrong format, numbers only.") {
         wrongCVC.textContent = "Too little, type 3 numbers.";
@@ -149,4 +144,3 @@ month.addEventListener("blur", monthCheck, false);
 year.addEventListener("blur", expiryCheck, false);
 year.addEventListener("blur", yearCheck, false);
 cvc.addEventListener("blur", cvcCheck, false);
-
