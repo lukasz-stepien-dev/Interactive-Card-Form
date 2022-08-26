@@ -8,7 +8,8 @@ let wrongCardNumber = document.getElementById("error-card-number");
 let month = document.getElementById("expiry-date-month");
 let year = document.getElementById("expiry-date-year");
 let wrongExpiryDate = document.getElementById("error-expiry-date");
-let wrongCVC = document.getElementById("erro-cvc");
+let cvc = document.getElementById("cvc");
+let wrongCVC = document.getElementById("error-cvc");
 let today = new Date();
 
 function cardholderNameCheck() {
@@ -97,9 +98,35 @@ function yearCheck() {
     }
 }
 
+function cvcCheck() {
+    let cvcInput = this.value;
+
+    if (cvcInput === "") {
+        wrongCVC.textContent = "Can't be blank";
+    } else {
+        wrongCVC.textContent = "";
+    }
+
+
+    for (let i = 0; i < cvcInput.length; i++) {
+        if (cvcInput[i].charCodeAt(0) > 57 || cvcInput[i].charCodeAt(0) < 48) {
+            wrongCVC.textContent = "Wrong format, numbers only.";
+            break;
+        } else {
+            wrongCVC.textContent = "";
+            }
+    }
+    
+
+    if (cvcInput.length < 3 && wrongCVC.textContent != "Can't be blank" && wrongCVC.textContent != "Wrong format, numbers only.") {
+        wrongCVC.textContent = "Too little, type 3 numbers.";
+    }
+}
+
 cardholderName.addEventListener('blur', cardholderNameCheck, false);
 cardNumber.addEventListener('blur', cardNumberCheck, false);
 month.addEventListener('blur', expiryCheck, false);
 month.addEventListener('blur', monthCheck, false);
 year.addEventListener('blur', expiryCheck, false);
 year.addEventListener('blur', yearCheck, false);
+cvc.addEventListener('blur', cvcCheck, false)
