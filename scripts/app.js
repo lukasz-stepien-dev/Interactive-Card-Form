@@ -9,6 +9,7 @@ let month = document.getElementById("expiry-date-month");
 let year = document.getElementById("expiry-date-year");
 let wrongExpiryDate = document.getElementById("error-expiry-date");
 let wrongCVC = document.getElementById("erro-cvc");
+let today = new Date();
 
 function cardholderNameCheck() {
     let name = this.value;
@@ -45,7 +46,6 @@ function cardNumberCheck() {
         } else {
             wrongCardNumber.textContent = "";
             }
-        
     }
     
 
@@ -73,11 +73,6 @@ function expiryCheck() {
             }
         
     }
-    
-
-    if (expiry.length < 2 && wrongExpiryDate.textContent != "Can't be blank" && wrongExpiryDate.textContent != "Wrong format, numbers only.") {
-        wrongExpiryDate.textContent = "One more number.";
-    }
 }
 
 function monthCheck() {
@@ -88,9 +83,23 @@ function monthCheck() {
     }
 }
 
+function yearCheck() {
+    let expiryYear = this.value;
+    let yearAfter15Years = today.getFullYear() + 15 - 2000;
+    
+    Number(expiryYear);
+    if (expiryYear > yearAfter15Years) {
+        wrongExpiryDate.textContent = "Your card have too late expiry date.";
+    }
+
+    if (expiryYear.length < 2 && wrongExpiryDate.textContent != "Can't be blank" && wrongExpiryDate.textContent != "Wrong format, numbers only.") {
+        wrongExpiryDate.textContent = "One more number in a year.";
+    }
+}
+
 cardholderName.addEventListener('blur', cardholderNameCheck, false);
 cardNumber.addEventListener('blur', cardNumberCheck, false);
 month.addEventListener('blur', expiryCheck, false);
-month.addEventListener('blur', monthCheck, false)
-
+month.addEventListener('blur', monthCheck, false);
 year.addEventListener('blur', expiryCheck, false);
+year.addEventListener('blur', yearCheck, false);
