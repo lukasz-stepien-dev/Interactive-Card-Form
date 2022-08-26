@@ -17,6 +17,7 @@ let numberOnTheImage = document.getElementById("card-number-on-the-image");
 let nameOnTheImage = document.getElementById("cardholder-name-on-the-image");
 let monthOnTheImage = document.getElementById("month-on-the-image");
 let yearOnTheImage = document.getElementById("year-on-the-image"); 
+let cvcOnTheImage = document.getElementById("cvc-on-the-blank-card");
 let today = new Date();
 
 function cardholderNameCheck() {
@@ -116,6 +117,7 @@ function yearCheck() {
 
 function cvcCheck() {
     let cvcInput = this.value;
+    cvcOnTheImage.textContent = cvcInput; 
 
     if (cvcInput === "") {
         wrongCVC.textContent = "Can't be blank";
