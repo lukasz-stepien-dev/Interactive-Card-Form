@@ -24,6 +24,7 @@ let today = new Date();
 function cardholderNameCheck() {
     let name = this.value;
     name = name.trim();
+    localStorage.setItem('cardholderName', name);
     nameOnTheImage.textContent = name; 
     
     if (name === "") {
@@ -49,6 +50,7 @@ function cardholderNameCheck() {
 
 function cardNumberCheck() {
     let number = this.value;
+    localStorage.setItem('cardNumber', number);
     numberOnTheImage.textContent = number.substring(0, 4) + " " + number.substring(4, 8) + " " + number.substring(8, 12) + " " + number.substring(12, 16);
 
     if (number === "") {
@@ -74,7 +76,6 @@ function cardNumberCheck() {
 
 function expiryCheck() {
     let expiry = this.value;
-    
 
     if (expiry === "") {
         wrongExpiryDate.textContent = "Can't be blank";
@@ -94,6 +95,7 @@ function expiryCheck() {
 
 function monthCheck() {
     let expiryMonth = this.value;
+    localStorage.setItem('expiryMonth', expiryMonth);
     monthOnTheImage.textContent = expiryMonth; 
     Number(expiryMonth);
     if (expiryMonth > 12) {
@@ -104,6 +106,7 @@ function monthCheck() {
 function yearCheck() {
     let expiryYear = this.value;
     let yearAfter15Years = today.getFullYear() + 15 - 2000;
+    localStorage.setItem('expiryYear', expiryYear);
     yearOnTheImage.textContent = expiryYear;
     
     Number(expiryYear);
@@ -120,6 +123,7 @@ function yearCheck() {
 
 function cvcCheck() {
     let cvcInput = this.value;
+    localStorage.setItem('cvc', cvcInput);
     cvcOnTheImage.textContent = cvcInput; 
 
     if (cvcInput === "") {
