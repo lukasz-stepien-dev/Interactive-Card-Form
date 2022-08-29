@@ -2,7 +2,7 @@
 
 * {margin: 0px; box-sizing: border-box; font-family: 'Space Grotesk', sans-serif;}
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 1440px) {
 
     body {
         display: flex;
@@ -26,7 +26,7 @@
     }
 
     #bg-card-front, #bg-card-back {
-        max-width: 65%;
+        width: 65vw;
     }
 
     #bg-card-front {
