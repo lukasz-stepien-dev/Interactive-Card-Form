@@ -112,11 +112,12 @@ function yearCheck() {
     Number(expiryYear);
     if (expiryYear > yearAfter15Years) {
         wrongExpiryDate.textContent = "Your card has too late expiry date.";
-    } else if (expiryYear < (today.getFullYear() - 2000)) {
+    } else if (expiryYear < (today.getFullYear() - 2000) && wrongExpiryDate.textContent != "Can't be blank") {
         wrongExpiryDate.textContent = "Your card is expired";
     }
 
     if (expiryYear.length < 2 && wrongExpiryDate.textContent != "Can't be blank" && wrongExpiryDate.textContent != "Wrong format, numbers only.") {
+        console.log(wrongExpiryDate.textContent);
         wrongExpiryDate.textContent = "One more number in a year.";
     }
 }
