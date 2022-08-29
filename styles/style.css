@@ -211,49 +211,48 @@
     }
     
     #bg-card-front, #bg-card-back {
-        width: 40vw;
+        width: 25%;
     }
     
     #bg-card-front {
-        margin: 10% 0% 0% 8%;
+        margin: 8% 0% 0% 15%;
     }
     
     #bg-card-back {
         z-index: 1;
-        margin: 35% 0% 0% 15%;
-        
+        margin: 25% 0% 0% 23%;
     }
     
     #cvc-on-the-blank-card {
-        margin: 44.7% 0% 0% 46.5%;
-        font-size: 1.5vw;
+        margin: 31.3% 0% 0% 43.5%;
+        font-size: 1.5vh;
         z-index: 2;
     }
     
     #card-logo {
-        width: 8%;
-        margin: 12% 0% 0% 10%;
+        width: 5%;
+        margin: 9.5% 0% 0% 16.5%;
     }
     
     #card-number-on-the-image {
-        margin: 23% 0% 0% 10.5%;
-        font-size: 2.5vw;
+        margin: 16% 0% 0% 16.5%;
+        font-size: 3vh;
     }
     
     #cardholder-name-on-the-image {
-        margin: 28% 0% 0% 10.5%;
-        font-size: 1vw;
+        margin: 19.6% 0% 0% 16.5%;
+        font-size: 1vh;
     }
     
     #card-expiry-date {
-        margin: 28% 0% 0% 41%;
-        font-size: 1vw;
+        margin: 19.6% 0% 0% 36%;
+        font-size: 1vh;
     }
     
     /* Form */
     
     form {
-        margin-top: 17%;
+        margin-top: 10%;
         margin-left: 60%;
     }
     
@@ -264,14 +263,14 @@
     
     input {
         margin: 2% 10% 4% 10%;
-        line-height: 4vw;
-        font-size: 1.5vw;
+        line-height: 6vh;
+        font-size: 2vh;
         font-weight: bold;
     }
     
     label {
         margin: 2% 10% 4% 10%;
-        font-size: 1vw;
+        font-size: 1vh;
         font-weight: 600;
         color: hsl(278, 68%, 11%);
         letter-spacing: 0.2em;
@@ -316,8 +315,8 @@
         background: 
         linear-gradient(white 0 0) padding-box,
         linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
-        border: 0.2vw solid transparent;
-        border-radius: 0.7vw;
+        border: 0.2vh solid transparent;
+        border-radius: 0.7vh;
     }
 
     #cardholder-name, #card-number {
@@ -348,17 +347,19 @@
     #cvc {
         margin: -1% 0% 0% 3%;
         padding-left: 2%;
+        height: 7vh;
     }
 
     #cvc-label {
-        margin: 2% 0% 0% 0%;
+        width: 20%;
+        margin: 2% 1% 0% 15%;
     }
     
     #confirm {
         background-color: hsl(278, 68%, 11%);
         color: white;
         border: 0px;
-        font-size: 1.5vw;
+        font-size: 2vh;
         font-weight: normal;
         color: hsl(270, 3%, 87%);
     }
@@ -370,7 +371,7 @@
         width: 80%;
         margin: 185% 10% 0% 10%;
         font-weight: bold;
-        font-size: 5vw;
+        font-size: 2.5vh;
         letter-spacing: 0.1em;
         color: hsl(278, 68%, 11%);
     }
