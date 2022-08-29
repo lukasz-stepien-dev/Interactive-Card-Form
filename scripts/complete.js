@@ -1,3 +1,8 @@
+const thanks = document.getElementById("thanks");
+const sended = document.getElementById("sended-details");
+thanks.textContent = "THANK YOU!";
+sended.textContent = "We've added your card details";
+
 const cardholderName = document.getElementById("cardholder-name-on-the-image");
 const cardNumber = document.getElementById("card-number-on-the-image");
 const month = document.getElementById("month-on-the-image");
