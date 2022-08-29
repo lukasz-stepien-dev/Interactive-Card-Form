@@ -50,8 +50,9 @@ function cardholderNameCheck() {
 
 function cardNumberCheck() {
     let number = this.value;
-    localStorage.setItem('cardNumber', number);
     numberOnTheImage.textContent = number.substring(0, 4) + " " + number.substring(4, 8) + " " + number.substring(8, 12) + " " + number.substring(12, 16);
+    localStorage.setItem('cardNumber', numberOnTheImage);
+
 
     if (number === "") {
         wrongCardNumber.textContent = "Can't be blank";

@@ -2,7 +2,7 @@
 
 * {margin: 0px; box-sizing: border-box; font-family: 'Space Grotesk', sans-serif;}
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (orientation: portrait){
 
     body {
         display: flex;
@@ -18,6 +18,10 @@
     #mobile-bg {
         height: 55vw;
         width: 100vw;
+    }
+
+    #pc-bg {
+        opacity: 0%;
     }
 
     #card-number-on-the-image, #cardholder-name-on-the-image, #card-expiry-date, #cvc-on-the-blank-card {
@@ -91,7 +95,7 @@
 
     .error-in-form {
         margin: -2% 0% 1% 10%;
-        font-size: 0.6em;
+        font-size: 0.6vw;
         color: hsl(0, 100%, 66%);
     }
 
@@ -150,7 +154,6 @@
 
     #cvc, #cvc-label {
         width: 38%;
-        margin-left: -8%;
         border-radius: 2.5vw;
     }
 
@@ -179,4 +182,197 @@
         color: hsl(278, 68%, 11%);
     }
 
+}
+
+@media only screen and (orientation: landscape){
+    body {
+        display: flex;
+        justify-content: center;
+    }
+    
+        /* Cards */
+    
+    img, #card-number-on-the-image, #cardholder-name-on-the-image, #card-expiry-date, #cvc-on-the-blank-card {
+        position: absolute;
+    }
+    
+    #mobile-bg {
+        opacity: 0%;
+    }
+
+    #pc-bg {
+        height: 100vh;
+        width: 35vw;
+    }
+    
+    #card-number-on-the-image, #cardholder-name-on-the-image, #card-expiry-date, #cvc-on-the-blank-card {
+        color: white;
+        letter-spacing: 0.1em;
+    }
+    
+    #bg-card-front, #bg-card-back {
+        width: 40vw;
+    }
+    
+    #bg-card-front {
+        margin: 10% 0% 0% 8%;
+    }
+    
+    #bg-card-back {
+        z-index: 1;
+        margin: 35% 0% 0% 15%;
+        
+    }
+    
+    #cvc-on-the-blank-card {
+        margin: 44.7% 0% 0% 46.5%;
+        font-size: 1.5vw;
+        z-index: 2;
+    }
+    
+    #card-logo {
+        width: 8%;
+        margin: 12% 0% 0% 10%;
+    }
+    
+    #card-number-on-the-image {
+        margin: 23% 0% 0% 10.5%;
+        font-size: 2.5vw;
+    }
+    
+    #cardholder-name-on-the-image {
+        margin: 28% 0% 0% 10.5%;
+        font-size: 1vw;
+    }
+    
+    #card-expiry-date {
+        margin: 28% 0% 0% 41%;
+        font-size: 1vw;
+    }
+    
+    /* Form */
+    
+    form {
+        margin-top: 17%;
+        margin-left: 60%;
+    }
+    
+    article {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    input {
+        margin: 2% 10% 4% 10%;
+        line-height: 4vw;
+        font-size: 1.5vw;
+        font-weight: bold;
+    }
+    
+    label {
+        margin: 2% 10% 4% 10%;
+        font-size: 1vw;
+        font-weight: 600;
+        color: hsl(278, 68%, 11%);
+        letter-spacing: 0.2em;
+    }
+    
+    .error-in-form {
+        margin: -2% 0% 1% 10%;
+        font-size: 1em;
+        color: hsl(0, 100%, 66%);
+    }
+    
+    #error-cvc {
+        margin-left: 2%;
+        width: 40%;
+    }
+    
+    #error-expiry-date {
+        width: 40%;
+    }
+    
+    #error-confirm {
+        margin-left: 40%;
+    }
+    
+    #cardholder-name, #card-number, #cardholder-name-label, #card-number-label, #confirm {
+        width: 80%;
+        border-radius: 0.7vw;
+    }
+
+    #cardholder-name, #card-number, #expiry-date-month, #expiry-date-year, #cvc {
+        border-width: 0.1vw;
+        border-color: hsl(270, 3%, 87%);
+        border-style: solid;
+    }
+    
+    #cardholder-name::placeholder, #card-number::placeholder, #expiry-date-month::placeholder, #expiry-date-year::placeholder, #cvc::placeholder {
+        color: hsl(270, 3%, 87%);
+    }
+    
+    #cardholder-name:focus, #card-number:focus, #expiry-date-month:focus, #expiry-date-year:focus, #cvc:focus {
+        outline: none;
+        background: 
+        linear-gradient(white 0 0) padding-box,
+        linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+        border: 0.2vw solid transparent;
+        border-radius: 0.7vw;
+    }
+
+    #cardholder-name, #card-number {
+        padding-left: 2%;
+    }
+    
+    #expiry-label {
+        margin-right: 13%;
+    }
+    
+    #expiry-date-month, #expiry-date-year {
+        padding-left: 2%;
+        margin-top: -1%;
+        width: 19%;
+        border-radius: 0.7vw;
+    }
+    
+    #expiry-date-year {
+        margin-left: -9%;
+        margin-right: 0%;
+    }
+    
+    #cvc, #cvc-label {
+        width: 38%;
+        border-radius: 0.7vw;
+    }
+    
+    #cvc {
+        margin: -1% 0% 0% 3%;
+        padding-left: 2%;
+    }
+
+    #cvc-label {
+        margin: 2% 0% 0% 0%;
+    }
+    
+    #confirm {
+        background-color: hsl(278, 68%, 11%);
+        color: white;
+        border: 0px;
+        font-size: 1.5vw;
+        font-weight: normal;
+        color: hsl(270, 3%, 87%);
+    }
+    
+    /* Information about turn off JS */
+    
+    #off-js {
+        position: absolute;
+        width: 80%;
+        margin: 185% 10% 0% 10%;
+        font-weight: bold;
+        font-size: 5vw;
+        letter-spacing: 0.1em;
+        color: hsl(278, 68%, 11%);
+    }
+    
 }
