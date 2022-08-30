@@ -153,12 +153,17 @@
     }
 
     #cvc, #cvc-label {
-        width: 38%;
         border-radius: 2.5vw;
     }
 
     #cvc {
-        margin-top: -1%;
+        margin: -1% 0% 0% -7%;
+        width: 38.5%;
+    }
+
+    #cvc-label {
+        width: 30%;
+        margin-left: -7%;
     }
 
     #confirm {
