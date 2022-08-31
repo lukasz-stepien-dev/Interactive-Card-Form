@@ -1,25 +1,25 @@
-let submit = document.getElementById("confirm")
+const submit = document.getElementById("confirm")
 document.getElementById("confirm").setAttribute("value", "Confirm");
 document.getElementById("off-js").textContent = "";
 submit.setAttribute("value", "Confirm");
 
 
-let cardholderName = document.getElementById("cardholder-name");
-let wrongName = document.getElementById("error-name");
-let cardNumber = document.getElementById("card-number");
-let wrongCardNumber = document.getElementById("error-card-number");
-let month = document.getElementById("expiry-date-month");
-let year = document.getElementById("expiry-date-year");
-let wrongExpiryDate = document.getElementById("error-expiry-date");
-let cvc = document.getElementById("cvc");
-let wrongCVC = document.getElementById("error-cvc");
-let wrongForm = document.getElementById("error-confirm");
-let numberOnTheImage = document.getElementById("card-number-on-the-image");
-let nameOnTheImage = document.getElementById("cardholder-name-on-the-image");
-let monthOnTheImage = document.getElementById("month-on-the-image");
-let yearOnTheImage = document.getElementById("year-on-the-image"); 
-let cvcOnTheImage = document.getElementById("cvc-on-the-blank-card");
-let today = new Date();
+const cardholderName = document.getElementById("cardholder-name");
+const wrongName = document.getElementById("error-name");
+const cardNumber = document.getElementById("card-number");
+const wrongCardNumber = document.getElementById("error-card-number");
+const month = document.getElementById("expiry-date-month");
+const year = document.getElementById("expiry-date-year");
+const wrongExpiryDate = document.getElementById("error-expiry-date");
+const cvc = document.getElementById("cvc");
+const wrongCVC = document.getElementById("error-cvc");
+const wrongForm = document.getElementById("error-confirm");
+const numberOnTheImage = document.getElementById("card-number-on-the-image");
+const nameOnTheImage = document.getElementById("cardholder-name-on-the-image");
+const monthOnTheImage = document.getElementById("month-on-the-image");
+const yearOnTheImage = document.getElementById("year-on-the-image"); 
+const cvcOnTheImage = document.getElementById("cvc-on-the-blank-card");
+const today = new Date();
 
 function cardholderNameCheck() {
     let name = this.value;
