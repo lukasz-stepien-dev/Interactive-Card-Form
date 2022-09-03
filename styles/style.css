@@ -21,7 +21,9 @@
     }
 
     #pc-bg {
+        position: absolute;
         opacity: 0%;
+        z-index: -100;
     }
 
     #card-number-on-the-image, #cardholder-name-on-the-image, #card-expiry-date, #cvc-on-the-blank-card {
