@@ -99,7 +99,7 @@
 
     .error-in-form {
         margin: -2% 0% 1% 10%;
-        font-size: 0.6vw;
+        font-size: 0.6em;
         color: hsl(0, 100%, 66%);
     }
 
@@ -287,7 +287,7 @@
     
     .error-in-form {
         margin: -2% 0% 1% 10%;
-        font-size: 1em;
+        font-size: 1.5vh;
         color: hsl(0, 100%, 66%);
     }
     
