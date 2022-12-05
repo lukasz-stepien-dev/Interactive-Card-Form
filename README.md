@@ -5,7 +5,7 @@ This is a solution to the [Interactive card details form challenge on Frontend M
 ## Table of contents
 
 - [Overview](#overview)
-  - [The Chellege](#the-chellenge)
+  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -20,9 +20,9 @@ This is a solution to the [Interactive card details form challenge on Frontend M
 
 ## Overview
 
-### The Chellenge
+### The Challenge
 
-Simple intersctive card form build by me. The site is for education and I finished it in 10 days so perhaps have bugs.  
+Simple interactive card form build by me. The site is for education and I finished it in 10 days so perhaps have bugs.  
 
 ### Screenshot
 
